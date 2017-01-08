@@ -2,6 +2,7 @@
 テキスト情報からER図を描画できる[BurntSushi/erd](https://github.com/BurntSushi/erd)コマンドを使えるようにした
 
 ## how to
+詳しくはMakefileをみてください
 
 #### ER図のテキストを編集
 `src/*.er` ファイルを編集する
