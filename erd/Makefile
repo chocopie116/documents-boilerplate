@@ -1,6 +1,5 @@
 DOCKER_COMPOSE=$(shell which docker-compose)
-erd_input_dir=src
-erd_output_dir=img
+erd_target_files=$(shell ls src | grep -e ".er")
 
 docker-compose/build:
 	$(DOCKER_COMPOSE) build
@@ -13,8 +12,13 @@ docker-compose/clean:
 	$(DOCKER_COMPOSE) rm
 
 generate:
-	$(DOCKER_COMPOSE) run --rm erd-worker erd -i $(erd_input_dir)/example/001_example.er -o $(erd_output_dir)/example/001_example.png
-	$(DOCKER_COMPOSE) run --rm erd-worker erd -i $(erd_input_dir)/example/002_example.er -o $(erd_output_dir)/example/002_example.png
+	make $(addprefix run_erd/,${erd_target_files})
 	$(DOCKER_COMPOSE) run --rm erd-worker \
-		convert -append $(erd_output_dir)/example/001_example.png $(erd_output_dir)/example/002_example.png -gravity southwest -splice 0x50 $(erd_output_dir)/example/all_erd.png
+		convert -append $(subst .er,.png,${erd_target_files}) -gravity southwest -splice 0x50 erd.png
+
+run_erd/%:
+	$(DOCKER_COMPOSE) run --rm erd-worker erd -i $* -o $(subst .er,.png,$*)
+
+ssh:
+	$(DOCKER_COMPOSE) run --rm erd-worker bash
 
