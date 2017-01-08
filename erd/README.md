@@ -1,12 +1,11 @@
 # ER図
-
-ER図を描画できるTool(https://github.com/BurntSushi/erd)をいい感じにできるようにした
-
+テキスト情報からER図を描画できる[BurntSushi/erd](https://github.com/BurntSushi/erd)コマンドを使えるようにした
 
 ## how to
 
 #### ER図のテキストを編集
-src/*.erファイルを編集する
+`src/*.er` ファイルを編集する
+
 ```
 $ cat src/example/001_example.er
 ```
@@ -19,12 +18,11 @@ $ make generate
 
 ## artifacts
 変換の結果以下のような画像ファイルが生成されます
-```
-$ls img/example
+
+``` $ls img/example
 001_example.png 002_example.png all_erd.png
 ```
 
 
 ![](img/example/all_red.png)
-
 
