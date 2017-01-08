@@ -19,7 +19,8 @@ $ make generate
 ## artifacts
 変換の結果以下のような画像ファイルが生成されます
 
-``` $ls img/example
+```
+$ls img/example
 001_example.png 002_example.png all_erd.png
 ```
 
