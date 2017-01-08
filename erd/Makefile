@@ -11,4 +11,6 @@ docker-compose/clean:
 	$(DOCKER_COMPOSE) rm
 
 generate:
-	$(DOCKER_COMPOSE) run erd bash
+	$(DOCKER_COMPOSE) run --rm erd-worker erd -i src/example01.er -o img/example01.png
+	$(DOCKER_COMPOSE) run --rm erd-worker erd -i src/example02.er -o img/example02.png
+
