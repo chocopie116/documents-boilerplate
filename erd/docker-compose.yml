@@ -1,0 +1,8 @@
+version: '2'
+services:
+    erd-worker:
+        build: .
+        volumes:
+            - ./:/srv
+        container_name: erd-workspace
+        working_dir: /srv
