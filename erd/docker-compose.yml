@@ -3,6 +3,6 @@ services:
     erd-worker:
         build: .
         volumes:
-            - ./:/srv
-        container_name: erd-workspace
+            - ./src:/srv
+        container_name: erd
         working_dir: /srv

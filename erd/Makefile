@@ -18,3 +18,6 @@ generate:
 	$(DOCKER_COMPOSE) run --rm erd-worker \
 		convert -append $(erd_output_dir)/example/001_example.png $(erd_output_dir)/example/002_example.png -gravity southwest -splice 0x50 $(erd_output_dir)/example/all_erd.png
 
+ssh:
+	$(DOCKER_COMPOSE) run --rm erd-worker bash
+
