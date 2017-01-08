@@ -5,5 +5,5 @@
 詳しくはMakefileをみてください
 
 
-![](src/all_erd.png)
+![](src/erd.png)
 
