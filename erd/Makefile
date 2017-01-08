@@ -14,7 +14,7 @@ docker-compose/clean:
 generate:
 	make $(addprefix run_erd/,${erd_target_files})
 	$(DOCKER_COMPOSE) run --rm erd-worker \
-		convert -append $(subst .er,.png,${erd_target_files}) -gravity southwest -splice 0x50 erd.png
+		convert -append $(subst .er,.png,${erd_target_files}) -gravity southwest -splice 0x50 all_erd.png
 
 run_erd/%:
 	$(DOCKER_COMPOSE) run --rm erd-worker erd -i $* -o $(subst .er,.png,$*)

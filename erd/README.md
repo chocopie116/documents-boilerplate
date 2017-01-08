@@ -8,5 +8,5 @@ $ cat docs/*.er
 $ make generate
 ```
 
-![](docs/erd.png)
+![](docs/all_erd.png)
 
