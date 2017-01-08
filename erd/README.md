@@ -25,5 +25,5 @@ $ls img/example
 ```
 
 
-![](img/example/all_red.png)
+![](img/example/all_erd.png)
 
