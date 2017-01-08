@@ -1,9 +1,12 @@
 # ER図
 テキスト情報からER図を描画できる[BurntSushi/erd](https://github.com/BurntSushi/erd)コマンドを使えるようにした
 
-## how to
-詳しくはMakefileをみてください
-
+## abstract
+下記の.erファイルから画像を生成する
+```
+$ cat src/*.er
+$ make generate
+```
 
 ![](src/erd.png)
 
