@@ -1,5 +1,5 @@
-DOCKER_COMPOSE=$(shell which docker-compose)
-erd_target_files=$(shell ls src | grep -e ".er")
+DOCKER_COMPOSE=$(shell which docker-compose) -f docker/docker-compose.yml
+erd_target_files=$(shell ls docs | grep -e ".er")
 
 docker-compose/build:
 	$(DOCKER_COMPOSE) build

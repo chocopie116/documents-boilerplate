@@ -4,9 +4,9 @@
 ## abstract
 下記の.erファイルから画像を生成する
 ```
-$ cat src/*.er
+$ cat docs/*.er
 $ make generate
 ```
 
-![](src/erd.png)
+![](docs/erd.png)
 
