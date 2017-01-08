@@ -13,4 +13,6 @@ docker-compose/clean:
 generate:
 	$(DOCKER_COMPOSE) run --rm erd-worker erd -i src/example/001_example.er -o img/example/001_example.png
 	$(DOCKER_COMPOSE) run --rm erd-worker erd -i src/example/002_example.er -o img/example/002_example.png
+	$(DOCKER_COMPOSE) run --rm erd-worker \
+		convert -append img/example/001_example.png img/example/002_example.png -gravity southwest -splice 0x50 img/example/all_erd.png
 
